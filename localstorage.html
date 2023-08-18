@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Localstorage</title>
+</head>
+
+<body>
+    <h1>Localstorage</h1>
+
+    <script>
+        // En array med tre värden
+        let myArray = ["Ett", "Två", "Tre"];
+
+        // Skriv ut till konsollen
+        console.log(myArray);
+
+        // Konvertera till JSON
+        let jsonStr = JSON.stringify(myArray);
+
+        // Lagra i localstorage
+        localStorage.setItem("numbers", jsonStr);
+
+        // Läs ut från localstorage - och konvertera tillbaks från (sk "parse") JSON
+        let myStoredArray = JSON.parse(localStorage.getItem("numbers"));
+
+        // Skriv ut till konsollen
+        console.log(myStoredArray);
+    </script>
+</body>
+
+</html>
